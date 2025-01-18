@@ -78,21 +78,22 @@ acc config default-test-dirname-format tests
 
 # acc new abc〇〇〇 --template java
 #acc new abc101 --template java
-acc new ./contests/abc101
+acc new abc101
 
 # configファイルの場所（config.json  session.json）
 acc config-dir
 
-# template確認
 acc templates
+# test確認
+pip install online-judge-tools
 oj t -c "python main.py" -d ./tests/
 
 # 提出
 #acc submit
 acc submit main.py -- --language 5055
 
-# テスト
-oj t -c "java Main.java" -d ./tests/  
+<!-- # テスト
+oj t -c "java Main.java" -d ./tests/   -->
 
 
 # ディレクトリ削除
